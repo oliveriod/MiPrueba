@@ -1,0 +1,248 @@
+
+
+  "id": "/subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup",
+  "location": "eastus",
+  "managedBy": null,
+  "name": "MiPhResourceGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+{- Finished ..
+  "freeOfferExpirationTime": null,
+  "geoRegion": "East US",
+  "hostingEnvironmentProfile": null,
+  "hyperV": false,
+  "id": "/subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup/providers/Microsoft.Web/serverfarms/MiPhServicePlan",
+  "isSpot": false,
+  "isXenon": false,
+  "kind": "linux",
+  "location": "East US",
+  "maximumElasticWorkerCount": 1,
+  "maximumNumberOfWorkers": 1,
+  "name": "MiPhServicePlan",
+  "numberOfSites": 0,
+  "perSiteScaling": false,
+  "provisioningState": "Succeeded",
+  "reserved": true,
+  "resourceGroup": "MiPhResourceGroup",
+  "sku": {
+    "capabilities": null,
+    "capacity": 1,
+    "family": "F",
+    "locations": null,
+    "name": "F1",
+    "size": "F1",
+    "skuCapacity": null,
+    "tier": "Free"
+  },
+  "spotExpirationTime": null,
+  "status": "Ready",
+  "subscription": "83ebf666-cd43-408b-9db1-cd5a8cc97876",
+  "tags": null,
+  "targetWorkerCount": 0,
+  "targetWorkerSizeId": 0,
+  "type": "Microsoft.Web/serverfarms",
+  "workerTierName": null
+}
+
+oliverio@ODBUNTU:~/fuentes/MiPrueba$ az webapp create --resource-group MiPhResourceGroup --plan MiPhServicePlan --name ByblosMiPruebaAPI --runtime "DOTNETCORE|3.1" --deployment-source-url "https://github.com/oliveriod/MiPrueba.git"
+
+Linking to git repository 'https://github.com/oliveriod/MiPrueba.git'
+Link to git repository failed due to error 'Deployment failed. Correlation ID: 0bde2d74-bcc3-43e0-8d27-92fca1a8cbab. Operation failed with status: 200. Details: Resource state Failed'
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": true,
+  "clientCertEnabled": false,
+  "clientCertExclusionPaths": null,
+  "cloningInfo": null,
+  "containerSize": 0,
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "byblosmipruebaapi.azurewebsites.net",
+  "enabled": true,
+  "enabledHostNames": [
+    "byblosmipruebaapi.azurewebsites.net",
+    "byblosmipruebaapi.scm.azurewebsites.net"
+  ],
+  "ftpPublishingUrl": "ftp://waws-prod-blu-175.ftp.azurewebsites.windows.net/site/wwwroot",
+  "hostNameSslStates": [
+    {
+      "hostType": "Standard",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "byblosmipruebaapi.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    },
+    {
+      "hostType": "Repository",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "byblosmipruebaapi.scm.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    }
+  ],
+  "hostNames": [
+    "byblosmipruebaapi.azurewebsites.net"
+  ],
+  "hostNamesDisabled": false,
+  "hostingEnvironmentProfile": null,
+  "httpsOnly": false,
+  "hyperV": false,
+  "id": "/subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup/providers/Microsoft.Web/sites/ByblosMiPruebaAPI",
+  "identity": null,
+  "inProgressOperationId": null,
+  "isDefaultContainer": null,
+  "isXenon": false,
+  "kind": "app,linux",
+  "lastModifiedTimeUtc": "2020-07-18T20:58:51.610000",
+  "location": "East US",
+  "maxNumberOfWorkers": null,
+  "name": "ByblosMiPruebaAPI",
+  "outboundIpAddresses": "40.71.11.147,40.121.54.23,13.68.142.153,13.82.102.15,13.68.129.207",
+  "possibleOutboundIpAddresses": "40.71.11.147,40.121.54.23,13.68.142.153,13.82.102.15,13.68.129.207,13.68.133.45,13.68.142.31,13.92.117.18,137.135.117.102,40.87.91.249",
+  "redundancyMode": "None",
+  "repositorySiteName": "ByblosMiPruebaAPI",
+  "reserved": true,
+  "resourceGroup": "MiPhResourceGroup",
+  "scmSiteAlsoStopped": false,
+  "serverFarmId": "/subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup/providers/Microsoft.Web/serverfarms/MiPhServicePlan",
+  "siteConfig": {
+    "acrUseManagedIdentityCreds": false,
+    "acrUserManagedIdentityID": null,
+    "alwaysOn": null,
+    "apiDefinition": null,
+    "apiManagementConfig": null,
+    "appCommandLine": null,
+    "appSettings": null,
+    "autoHealEnabled": null,
+    "autoHealRules": null,
+    "autoSwapSlotName": null,
+    "azureMonitorLogCategories": null,
+    "connectionStrings": null,
+    "cors": null,
+    "customAppPoolIdentityAdminState": null,
+    "customAppPoolIdentityTenantState": null,
+    "defaultDocuments": null,
+    "detailedErrorLoggingEnabled": null,
+    "documentRoot": null,
+    "experiments": null,
+    "fileChangeAuditEnabled": null,
+    "ftpsState": null,
+    "functionsRuntimeScaleMonitoringEnabled": null,
+    "handlerMappings": null,
+    "healthCheckPath": null,
+    "http20Enabled": null,
+    "httpLoggingEnabled": null,
+    "ipSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 1,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "javaContainer": null,
+    "javaContainerVersion": null,
+    "javaVersion": null,
+    "limits": null,
+    "linuxFxVersion": null,
+    "loadBalancing": null,
+    "localMySqlEnabled": null,
+    "logsDirectorySizeLimit": null,
+    "machineKey": null,
+    "managedPipelineMode": null,
+    "managedServiceIdentityId": null,
+    "metadata": null,
+    "minTlsVersion": null,
+    "minimumElasticInstanceCount": 0,
+    "netFrameworkVersion": null,
+    "nodeVersion": null,
+    "numberOfWorkers": null,
+    "phpVersion": null,
+    "powerShellVersion": null,
+    "preWarmedInstanceCount": null,
+    "publishingPassword": null,
+    "publishingUsername": null,
+    "push": null,
+    "pythonVersion": null,
+    "remoteDebuggingEnabled": null,
+    "remoteDebuggingVersion": null,
+    "requestTracingEnabled": null,
+    "requestTracingExpirationTime": null,
+    "routingRules": null,
+    "runtimeADUser": null,
+    "runtimeADUserPassword": null,
+    "scmIpSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 1,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "scmIpSecurityRestrictionsUseMain": null,
+    "scmType": null,
+    "tracingOptions": null,
+    "use32BitWorkerProcess": null,
+    "virtualApplications": null,
+    "vnetName": null,
+    "webSocketsEnabled": null,
+    "websiteTimeZone": null,
+    "winAuthAdminState": null,
+    "winAuthTenantState": null,
+    "windowsFxVersion": null,
+    "xManagedServiceIdentityId": null
+  },
+  "slotSwapStatus": null,
+  "state": "Running",
+  "suspendedTill": null,
+  "tags": null,
+  "targetSwapSlot": null,
+  "trafficManagerHostNames": null,
+  "type": "Microsoft.Web/sites",
+  "usageState": "Normal"
+}
+oliverio@ODBUNTU:~/fuentes/MiPrueba$ 
+
+
+
+
+oliverio@ODBUNTU:~/fuentes/MiPrueba$ az ad sp create-for-rbac --name "MiPhUser" --role contributor --scopes /subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup/providers/Microsoft.Web/sites/ByblosMiPruebaAPI --sdk-auth
+Changing "MiPhUser" to a valid URI of "http://MiPhUser", which is the required format used for service principal names
+Creating a role assignment under the scope of "/subscriptions/83ebf666-cd43-408b-9db1-cd5a8cc97876/resourceGroups/MiPhResourceGroup/providers/Microsoft.Web/sites/ByblosMiPruebaAPI"
+  Retrying role assignment creation: 1/36
+{
+  "clientId": "bd37b7a8-4913-4b72-b390-1c55f6cbf384",
+  "clientSecret": "pCWfynlycd7D_g-q5A3Q4Y0WUzZfgr4B-6",
+  "subscriptionId": "83ebf666-cd43-408b-9db1-cd5a8cc97876",
+  "tenantId": "10b8170d-4501-4000-9a0b-3886f59c9eef",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+
