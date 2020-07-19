@@ -40,18 +40,18 @@ namespace MiPrueba.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var Par�metrosParaBitacora = Configuration.GetSection("Par�metrosParaBit�cora").Get<Par�metrosParaBit�cora>();
+            var ParámetrosParaBitácora = Configuration.GetSection("ParámetrosParaBitácora").Get<ParámetrosParaBitácora>();
 
 
 
 
             services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
 
-            services.Configure<Par�metrosParaAutenticar>(Configuration.GetSection("ParametrosParaAutenticar"));
+            services.Configure<ParámetrosParaAutenticar>(Configuration.GetSection("ParametrosParaAutenticar"));
 
-            var Par�metrosParaAutenticar = Configuration.GetSection("ParametrosParaAutenticar").Get<Par�metrosParaAutenticar>();
+            var ParámetrosParaAutenticar = Configuration.GetSection("ParametrosParaAutenticar").Get<ParámetrosParaAutenticar>();
 
-            if (Par�metrosParaAutenticar.MiLlaveParaLogin == null)
+            if (ParámetrosParaAutenticar.MiLlaveParaLogin == null)
             {
 
                 return;
@@ -140,7 +140,11 @@ namespace MiPrueba.API
 
                 app.UseEndpoints(endpoints =>
                 {
-                    endpoints.MapControllers();
+//                    endpoints.MapControllers();
+                    endpoints.MapGet("/", async context =>
+                    {
+                        await context.Response.WriteAsync("Hello Azure! Lo logrè");
+                    });
                 });
 
 
